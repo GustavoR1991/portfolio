@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GitHubRepo, GitHubUser, RepoFilterParams } from '../types/GitHub';
+import type { GitHubRepo, GitHubUser, RepoFilterParams } from '../types/GitHub';
 
 const GITHUB_API_BASE = 'https://api.github.com'
 const GITHUB_USERNAME = 'GustavoR1991'
