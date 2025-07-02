@@ -34,7 +34,7 @@ export const githubApi = {
     return repos
       .filter(repo => !repo.name.includes('fork'))
       .sort((a, b) => b.stargazers_count - a.stargazers_count)
-      .slice(0, 11);
+      .slice(0, 50);
   }
 
 
