@@ -1,69 +1,168 @@
-# React + TypeScript + Vite
+# 📁 Portfolio GitHub React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um portfolio moderno e responsivo que exibe informações do GitHub de forma elegante, desenvolvido com React, TypeScript e Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Perfil Dinâmico**: Busca automaticamente dados do perfil GitHub
+- **Repositórios em Destaque**: Exibe os repositórios mais relevantes
+- **Design Responsivo**: Adapta-se perfeitamente a diferentes tamanhos de tela
+- **Interface Moderna**: Design limpo e profissional
+- **Integração LinkedIn**: Link direto para o perfil profissional
+- **Carregamento Otimizado**: Estados de loading elegantes
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** - Biblioteca JavaScript para interfaces
+- **TypeScript** - Superset tipado do JavaScript
+- **Tailwind CSS** - Framework CSS utility-first
+- **Vite** - Build tool moderna e rápida
+- **GitHub API** - Integração com dados do GitHub
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalação
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Clone o repositório**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/GustavoR1991/portfolio-react.git
+cd portfolio-react
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Instale as dependências**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. **Configure as variáveis de ambiente**
+
+```bash
+# Crie um arquivo .env.local na raiz do projeto
+VITE_GITHUB_TOKEN=seu_token_aqui
+VITE_GITHUB_USERNAME=seu_usuario_github
+```
+
+4. **Execute o projeto**
+
+```bash
+npm run dev
+```
+
+O projeto estará disponível em `http://localhost:5173`
+
+## 🔧 Configuração da API do GitHub
+
+Para usar a API do GitHub, você precisa:
+
+1. Acessar [GitHub Developer Settings](https://github.com/settings/tokens)
+2. Gerar um novo token pessoal
+3. Adicionar o token no arquivo `.env.local`
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── Header/
+│   │   └── index.tsx        # Componente do cabeçalho
+│   └── Repositories/
+│       └── index.tsx        # Componente dos repositórios
+├── services/
+│   └── githubApi.ts         # Serviços da API GitHub
+├── types/
+│   └── GitHub.ts            # Tipagens TypeScript
+└── App.tsx                  # Componente principal
+```
+
+## 🎨 Personalização
+
+### Cores
+
+As cores podem ser personalizadas no arquivo `tailwind.config.js`:
+
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        500: '#3b82f6',
+        600: '#2563eb',
+        // ...outras cores
+      }
+    }
+  }
+}
+```
+
+### Informações Pessoais
+
+Edite o componente `Header` para personalizar:
+
+- Link do LinkedIn
+- Nome de usuário do GitHub
+- Outras informações pessoais
+
+## 🚀 Build e Deploy
+
+### Build para Produção
+
+```bash
+npm run build
+```
+
+### Preview da Build
+
+```bash
+npm run preview
+```
+
+### Deploy Sugeridos
+
+- **Vercel**: Deploy automático via GitHub
+- **Netlify**: Build contínua e CDN global
+- **GitHub Pages**: Hospedagem gratuita GitHub
+
+## 📱 Responsividade
+
+O projeto é totalmente responsivo com breakpoints:
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+## 🤝 Como Contribuir
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Roadmap
+
+- [ ] Adicionar gráficos de atividade GitHub
+- [ ] Implementar filtros por linguagem
+- [ ] Adicionar seção de skills
+- [ ] Criar tema dark/light
+- [ ] Adicionar animações avançadas
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👨‍💻 Autor
+
+**Gustavo Rosa**
+
+- GitHub: [@GustavoR1991](https://github.com/GustavoR1991)
+- LinkedIn: [Gustavo Rosa de Sousa](https://www.linkedin.com/in/gustavo-rosa-de-sousa/)
+
+## 🙏 Agradecimentos
+
+- GitHub pela API pública
+- Tailwind CSS pela facilidade de estilização
+- React team pelo framework incrível
+
+---
+
+⭐ Se este projeto te ajudou, considere dar uma star!
