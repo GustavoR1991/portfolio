@@ -1,9 +1,91 @@
 @import "tailwindcss";
 
-body,
-input,
-textarea,
-select,
-button {
-  font: 400 1rem "Roboto", sans-serif;
+/* Faz a variante dark: do Tailwind seguir o atributo data-theme */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ---------- Tema claro (padrão) ---------- */
+:root {
+  --bg: #f7f5fb;
+  --surface: #ffffff;
+  --ink: #1f1b2e;
+  --muted: #5e5873;
+  --line: #e4dff0;
+
+  /* Pastéis: iguais nos dois temas */
+  --lilac: #c9b8ff;
+  --peach: #ffc8a8;
+  --butter: #ffe69a;
+  --sky: #b5daff;
+  --rose: #ffb8d2;
+  --on-pastel: #1f1b2e;
+}
+
+/* ---------- Tema escuro ---------- */
+[data-theme="dark"] {
+  --bg: #16131f;
+  --surface: #201c2c;
+  --ink: #f2eefa;
+  --muted: #b3abc8;
+  --line: #322c42;
+}
+
+/* Cria as classes bg-bg, text-ink, border-line, bg-lilac... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-lilac: var(--lilac);
+  --color-peach: var(--peach);
+  --color-butter: var(--butter);
+  --color-sky: var(--sky);
+  --color-rose: var(--rose);
+  --color-on-pastel: var(--on-pastel);
+}
+
+/* Cria as classes font-display e font-mono */
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-display);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+::selection {
+  background: var(--lilac);
+  color: var(--on-pastel);
+}
+
+/* Classes que você vai reaproveitar em vários componentes */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 md:px-10;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium;
+  }
+
+  /* Fundo de papel pontilhado do Hero */
+  .paper {
+    background-image: radial-gradient(var(--line) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+  }
 }

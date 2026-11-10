@@ -1,168 +1,139 @@
-# 📁 Portfolio GitHub React
+<div align="center">
 
-Um portfolio moderno e responsivo que exibe informações do GitHub de forma elegante, desenvolvido com React, TypeScript e Tailwind CSS.
+<img src="docs/hero-light.png" alt="Mesa de adesivos pastel do portfólio" width="420" />
 
-## 🚀 Funcionalidades
+# gustavo · rosa
 
-- **Perfil Dinâmico**: Busca automaticamente dados do perfil GitHub
-- **Repositórios em Destaque**: Exibe os repositórios mais relevantes
-- **Design Responsivo**: Adapta-se perfeitamente a diferentes tamanhos de tela
-- **Interface Moderna**: Design limpo e profissional
-- **Integração LinkedIn**: Link direto para o perfil profissional
-- **Carregamento Otimizado**: Estados de loading elegantes
+**Portfólio de Gustavo Rosa de Sousa, desenvolvedor Full-Stack Júnior.**
+Tons pastel, tema claro e escuro, português e inglês, e uma mesa de adesivos que dá para arrastar.
 
-## 🛠️ Tecnologias Utilizadas
+![React](https://img.shields.io/badge/React_19-1F1B2E?style=for-the-badge&logo=react&logoColor=B5DAFF)
+![TypeScript](https://img.shields.io/badge/TypeScript-1F1B2E?style=for-the-badge&logo=typescript&logoColor=C9B8FF)
+![Vite](https://img.shields.io/badge/Vite-1F1B2E?style=for-the-badge&logo=vite&logoColor=FFE69A)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-1F1B2E?style=for-the-badge&logo=tailwindcss&logoColor=B5DAFF)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-1F1B2E?style=for-the-badge&logo=framer&logoColor=FFB8D2)
 
-- **React 18** - Biblioteca JavaScript para interfaces
-- **TypeScript** - Superset tipado do JavaScript
-- **Tailwind CSS** - Framework CSS utility-first
-- **Vite** - Build tool moderna e rápida
-- **GitHub API** - Integração com dados do GitHub
+[LinkedIn](https://www.linkedin.com/in/gustavo-rosa-de-sousa/) · [E-mail](mailto:gustavorosadesousa11@gmail.com) · [GitHub](https://github.com/GustavoR1991)
 
-## 📦 Instalação
-
-1. **Clone o repositório**
-
-```bash
-git clone https://github.com/GustavoR1991/portfolio-react.git
-cd portfolio-react
-```
-
-2. **Instale as dependências**
-
-```bash
-npm install
-```
-
-3. **Configure as variáveis de ambiente**
-
-```bash
-# Crie um arquivo .env.local na raiz do projeto
-VITE_GITHUB_TOKEN=seu_token_aqui
-VITE_GITHUB_USERNAME=seu_usuario_github
-```
-
-4. **Execute o projeto**
-
-```bash
-npm run dev
-```
-
-O projeto estará disponível em `http://localhost:5173`
-
-## 🔧 Configuração da API do GitHub
-
-Para usar a API do GitHub, você precisa:
-
-1. Acessar [GitHub Developer Settings](https://github.com/settings/tokens)
-2. Gerar um novo token pessoal
-3. Adicionar o token no arquivo `.env.local`
-
-## 📁 Estrutura do Projeto
-
-```
-src/
-├── components/
-│   ├── Header/
-│   │   └── index.tsx        # Componente do cabeçalho
-│   └── Repositories/
-│       └── index.tsx        # Componente dos repositórios
-├── services/
-│   └── githubApi.ts         # Serviços da API GitHub
-├── types/
-│   └── GitHub.ts            # Tipagens TypeScript
-└── App.tsx                  # Componente principal
-```
-
-## 🎨 Personalização
-
-### Cores
-
-As cores podem ser personalizadas no arquivo `tailwind.config.js`:
-
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: {
-        500: '#3b82f6',
-        600: '#2563eb',
-        // ...outras cores
-      }
-    }
-  }
-}
-```
-
-### Informações Pessoais
-
-Edite o componente `Header` para personalizar:
-
-- Link do LinkedIn
-- Nome de usuário do GitHub
-- Outras informações pessoais
-
-## 🚀 Build e Deploy
-
-### Build para Produção
-
-```bash
-npm run build
-```
-
-### Preview da Build
-
-```bash
-npm run preview
-```
-
-### Deploy Sugeridos
-
-- **Vercel**: Deploy automático via GitHub
-- **Netlify**: Build contínua e CDN global
-- **GitHub Pages**: Hospedagem gratuita GitHub
-
-## 📱 Responsividade
-
-O projeto é totalmente responsivo com breakpoints:
-
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-## 🤝 Como Contribuir
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Roadmap
-
-- [ ] Adicionar gráficos de atividade GitHub
-- [ ] Implementar filtros por linguagem
-- [ ] Adicionar seção de skills
-- [ ] Criar tema dark/light
-- [ ] Adicionar animações avançadas
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👨‍💻 Autor
-
-**Gustavo Rosa**
-
-- GitHub: [@GustavoR1991](https://github.com/GustavoR1991)
-- LinkedIn: [Gustavo Rosa de Sousa](https://www.linkedin.com/in/gustavo-rosa-de-sousa/)
-
-## 🙏 Agradecimentos
-
-- GitHub pela API pública
-- Tailwind CSS pela facilidade de estilização
-- React team pelo framework incrível
+</div>
 
 ---
 
-⭐ Se este projeto te ajudou, considere dar uma star!
+## Sobre o projeto
+
+Eu queria um portfólio que não parecesse mais um site preto com verde. Então montei um com cara de caderno: fundo de papel pontilhado, cores pastel e adesivos com as tecnologias que eu uso, que o visitante pode arrastar pela tela.
+
+Os dados do GitHub (foto, número de repositórios, seguidores e a lista de projetos) vêm direto da API do GitHub. Assim, o site se atualiza sozinho quando eu publico algo novo.
+
+## Prévia
+
+| Tema claro | Tema escuro |
+| :---: | :---: |
+| <img src="docs/hero-light.png" alt="Hero no tema claro" width="360" /> | <img src="docs/hero-dark.png" alt="Hero no tema escuro" width="360" /> |
+
+## Funcionalidades
+
+- **Mesa de adesivos:** os adesivos entram com animação e podem ser arrastados, sem sair da mesa (Framer Motion).
+- **Tema claro e escuro:** segue o tema do sistema na primeira visita e salva a escolha no navegador. Um script no `index.html` aplica o tema antes da página aparecer, para não piscar.
+- **Português e inglês:** um botão PT/EN troca todos os textos na hora. O TypeScript garante que as duas línguas têm exatamente as mesmas chaves.
+- **Projetos do GitHub:** todos os repositórios públicos, sem forks, com os destaques primeiro, descrições traduzidas e um botão "Mostrar todos".
+- **Currículo completo:** experiência, formação, cursos e idiomas.
+- **Responsivo e acessível:** menu próprio para celular, botões com `aria-label` e cores com bom contraste nos dois temas.
+
+## Tecnologias
+
+| Camada | Ferramentas |
+| --- | --- |
+| Interface | React 19, TypeScript, Vite |
+| Estilo | Tailwind CSS v4 (com variáveis CSS para os temas) |
+| Animação | Framer Motion |
+| Ícones | Lucide React + SVGs próprios para GitHub e LinkedIn |
+| Dados | Axios + API pública do GitHub |
+| Fontes | Bricolage Grotesque e JetBrains Mono |
+
+## Como rodar
+
+Você precisa do [Node.js](https://nodejs.org/) 20 ou mais novo.
+
+```bash
+git clone https://github.com/GustavoR1991/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
+
+Abra o endereço que aparecer no terminal (normalmente `http://localhost:5173`).
+
+| Comando | O que faz |
+| --- | --- |
+| `npm run dev` | Sobe o servidor de desenvolvimento |
+| `npm run build` | Checa os tipos e gera a versão final na pasta `dist` |
+| `npm run preview` | Mostra a versão final localmente |
+| `npm run lint` | Roda o ESLint |
+
+## Estrutura de pastas
+
+```text
+src/
+├── components/        # Uma pasta por seção (Hero, Projects, Skills...)
+├── constants/
+│   └── profile.ts     # Nome, links, e-mail e repositórios em destaque
+├── context/           # ThemeContext e LanguageContext
+├── i18n/
+│   └── translation.ts # Todos os textos em português e inglês
+├── services/
+│   └── githubApi.ts   # Chamadas à API do GitHub
+├── styles/
+│   └── global.css     # Cores dos temas e classes reaproveitadas
+├── types/
+│   └── github.ts      # Tipos das respostas do GitHub
+└── utils/
+    └── pastel.ts      # Classes das cores pastel
+```
+
+## Como personalizar
+
+| Quero mudar... | Arquivo |
+| --- | --- |
+| Links, e-mail ou usuário do GitHub | `src/constants/profile.ts` |
+| Quais repositórios aparecem primeiro | `featuredRepos` em `src/constants/profile.ts` |
+| Qualquer texto do site (nos dois idiomas) | `src/i18n/translation.ts` |
+| As tecnologias da seção Skills | o array `groups` em `src/components/Skills/index.tsx` |
+| Os adesivos da mesa | o array `stickers` em `src/components/Hero/index.tsx` |
+| As cores | as variáveis no topo de `src/styles/global.css` |
+
+## Paleta
+
+| Cor | Hex | Uso |
+| --- | --- | --- |
+| Lilás | `#C9B8FF` | Destaques, botão de tema, contato |
+| Pêssego | `#FFC8A8` | Marca-texto do nome, cartões |
+| Manteiga | `#FFE69A` | Botão de idioma, cursos |
+| Céu | `#B5DAFF` | Adesivos e cartões |
+| Rosa | `#FFB8D2` | Adesivos e linha do tempo |
+| Tinta | `#1F1B2E` | Texto (claro) e texto sobre os tons pastel |
+| Noite | `#16131F` | Fundo do tema escuro |
+
+## Contato
+
+- **LinkedIn:** [gustavo-rosa-de-sousa](https://www.linkedin.com/in/gustavo-rosa-de-sousa/)
+- **E-mail:** [gustavorosadesousa11@gmail.com](mailto:gustavorosadesousa11@gmail.com)
+- **GitHub:** [@GustavoR1991](https://github.com/GustavoR1991)
+
+---
+
+<details>
+<summary><strong>English</strong></summary>
+
+Personal portfolio of **Gustavo Rosa de Sousa**, a Junior Full-Stack developer from São Paulo, Brazil.
+
+It has pastel colors, light and dark themes, a Portuguese/English switch, and a board of draggable tech stickers. Profile data and repositories come live from the GitHub API.
+
+Built with React 19, TypeScript, Vite, Tailwind CSS v4 and Framer Motion.
+
+```bash
+npm install
+npm run dev
+```
+
+</details>

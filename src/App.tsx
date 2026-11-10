@@ -1,14 +1,27 @@
-import { Header } from './components/Header'
-import { Repositories } from './components/Repositories'
+import { NavBar } from "./components/NavBar";
+import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Projects } from "./components/Projects";
+import { Skills } from "./components/Skills";
+import { Experience } from "./components/Experience";
+import { Education } from "./components/Education";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
-function App() {
-
+export default function App() {
   return (
-    <div className=" bg-slate-400">
-      <Header />
-      <Repositories />
-    </div>
-  )
+    <>
+      <NavBar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }
-
-export default App
