@@ -1,6 +1,7 @@
-import { Fragment } from "react";
+// Usados pelo bloco "Minha stack atual" (comentado abaixo) — descomente junto
+// import { Fragment } from "react";
+// import { ArrowRight, Plus } from "lucide-react";
 import { motion } from "framer-motion";
-import { ArrowRight, Plus } from "lucide-react";
 import { SectionTitle } from "../SectionTitle";
 import { pastelBg } from "../../utils/pastel";
 import type { Pastel } from "../../utils/pastel";
@@ -77,7 +78,8 @@ export function Skills() {
   const { t } = useLanguage();
 
   // A stack que você usa hoje, na ordem em que os dados passam
-  const stack: {
+  // (desativada junto com o bloco "Minha stack atual")
+  /* const stack: {
     label: string;
     title: string;
     detail: string;
@@ -112,7 +114,7 @@ export function Skills() {
       color: "rose",
       joiner: "plus",
     },
-  ];
+  ]; */
 
   return (
     <section id="skills" className="section">

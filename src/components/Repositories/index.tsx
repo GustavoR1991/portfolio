@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import type { GitHubRepo } from "../../../types/GitHub"
-import { githubApi } from "../../../services/githubAPi"
+import type { GitHubRepo } from "../../types/github"
+import { githubApi } from "../../services/githubApi"
 
 export function Repositories() {
 
@@ -11,7 +11,7 @@ export function Repositories() {
   useEffect(() => {
     const fetchRepositories = async () => {
       try {
-        const reposData = await githubApi.getFeaturedRepositories()
+        const reposData = await githubApi.getRepositories()
         setRepos(reposData)
       } catch (error) {
         console.error('Erro ao buscar repositórios:', error)
